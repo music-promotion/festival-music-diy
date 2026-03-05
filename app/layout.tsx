@@ -58,7 +58,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <head>
         // JSON-LD 结构化数据
   const jsonLd = {
     "@context": "https://schema.org",
@@ -78,7 +77,6 @@ export default function RootLayout({
 
   return (
     <html lang="zh-CN" className={`${notoSans.variable} ${notoSerif.variable}`}>
-      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -87,7 +85,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
       <body className="antialiased" style={{ fontFamily: "'Cabin', sans-serif" }}>
         {children}
       </body>
